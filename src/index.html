@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Тестовое задавние</title>
+    <title>Test task</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -14,11 +14,11 @@
         <div class="container-content">
             <div class="content__photo">
                 <div class="photo__mini">
-                    <img src="../img/photo.png" alt="Mini Photo">
-                    <img src="../img/photo (1).png" alt="Mini Photo">
+                    <img src="img/photo.png" alt="Mini Photo">
+                    <img src="img/photo (1).png" alt="Mini Photo">
                 </div>
                 <div class="photo__main">
-                    <img src="../img/photo(2).png" alt="Main Photo">
+                    <img src="img/photo(2).png" alt="Main Photo">
                 </div>
             </div>
             <div class="content__info">
@@ -50,11 +50,17 @@
                         <div class="radio-button_blue">
                             <input type="radio" id="color-cloth1" name="color" value="color-cloth">
                             <!--<label for="color-cloth1" class="radio-button__label" id="blue-color"></label>-->
-                            <label for="color-cloth1" class="radio-button__label">Blue</label>
+                            <label for="color-cloth1" class="radio-button__label">                                
+                                <div class="box-color blue"></div>
+                                Blue
+                            </label>
                         </div>
                         <div class="radio-button_brown">
-                            <input type="radio" id="color-cloth2" name="color" value="color-cloth">
-                            <label for="color-cloth2" class="radio-button__label">Brown</label>
+                            <input type="radio" id="color-cloth2" name="color" value="color-cloth" checked>
+                            <label for="color-cloth2" class="radio-button__label">
+                                <div class="box-color brown"></div>
+                                Brown
+                            </label>
                         </div>
                     </div>
                 </div>

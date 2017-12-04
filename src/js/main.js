@@ -7,22 +7,48 @@
 
 //= ../../node_modules/owl.carousel/dist/owl.carousel.min.js
 
-console.log('owlCarousel')
+var screenwidth = screen.width;
 
-// $('.carusel__slick').owlCarousel({
-//     center: true,
-//     items:2,
-//     loop:true,
-//     margin:10,
-//     responsive:{
-//         600:{
-//             items:4
-//         }
+
+console.log(screenwidth)
+
+// $(function(){
+//     if(screenwidth < 768) {
+//     $('#btn-open').click(function() {
+//         $('.menu__hiden').animate({
+//             left: '0px'
+//         }, 200);
+//     })
 //     }
-// });
+// })
+
+$(function(){
+    if(screenwidth < 768) {
+        $(document).on('click','#hidden_close',function() {
+            $('.menu__hiden').animate({
+                left: '-285px'
+            }, 200);
+            $('.modal-overlay').removeClass('active');
+        });
+
+        $('.btn-open').click(function() {
+            $('.menu__hiden').animate({
+                left: '0px'
+            }, 200);
+            $('.modal-overlay').addClass('active');
+        });
+        
+        $(document).on('click','.modal-overlay', function() {
+             $('.menu__hiden').animate({
+                left: '-285px'
+            }, 200);
+            $('.modal-overlay').removeClass('active');
+        });
+    }
+})
+
 
 $(function() {
-        console.log($(".carusel__slick"))
         $(".carusel__slick").slick({
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -55,16 +81,13 @@ $(function() {
     
 })
 
-var main = function(){
-    $('#btn-open').click(function() {
-        $('.menu__hiden').animate({
-            left: '0px'
-        }, 200);
-    })
-}
-
-$(document).resize();
-$(document).ready(main);
+// var main = function(){
+//     $('#btn-open').click(function() {
+//         $('.menu__hiden').animate({
+//             left: '0px'
+//         }, 200);
+//     })
+// }
 
 /*
  * Custom
